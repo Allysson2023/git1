@@ -1,1 +1,31 @@
-allysson
+
+# JANELA TKINTER/CUSTOM
+
+import customtkinter
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("dark-blue")
+
+
+janela = customtkinter.CTk()
+
+janela.geometry("500x300")
+def clique():
+    print("ola seja bem vindo")
+
+texto = customtkinter.CTkLabel(janela,text="fazer login")
+texto.pack(pady=10,padx=10)
+
+email = customtkinter.CTkEntry(janela,placeholder_text="seu email")
+email.pack(pady=10,padx=10)
+
+senha = customtkinter.CTkEntry(janela,placeholder_text="sua senha",show="*")
+senha.pack(pady=10,padx=10)
+
+comando = customtkinter.CTkCheckBox(janela,text="lembra do long")
+comando.pack(pady=10,padx=10)
+
+botao = customtkinter.CTkButton(janela,text="login", command = clique)
+botao.pack(pady=10,padx=10)
+
+
+janela.mainloop()
